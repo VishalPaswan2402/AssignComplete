@@ -68,5 +68,5 @@ async function saveAsPDF() {
     document.body.removeChild(textContainer); // Clean up
 
     // Save the PDF
-    pdf.save("textarea_content.pdf");
+    pdf.save("assignComplete.pdf");
 }
