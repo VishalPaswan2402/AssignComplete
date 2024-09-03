@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign And Complete</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Niconne&family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Allura&family=Architects+Daughter&family=Bilbo&family=Caveat:wght@400..700&family=Charm:wght@400;700&family=Fondamento:ital@0;1&family=Gochi+Hand&family=Handlee&family=Indie+Flower&family=Loved+by+the+King&family=Marck+Script&family=Nanum+Pen+Script&family=Nerko+One&family=Neucha&family=Niconne&family=Playball&family=Playwrite+AU+NSW:wght@100..400&family=Playwrite+CU:wght@100..400&family=Playwrite+HR+Lijeva:wght@100..400&family=Satisfy&family=Seaweed+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navBar1">
+      <div class="navBar">
+        <div class="logo"></div>
+        <p class="navTxt">AssignComplete</p>
+      </div>
+    </div>
+
+      <div id="textPart">
+        <div class="card" style="width: 35rem; height: 32rem;">
+            <div class="card-body">
+              <h5 class="card-title">Enter Solution</h5>
+              <textarea  class="form-control textArea" style="height: 28rem" placeholder="Enter Your Assignment Solution Here..." oninput="reflectContent()"></textarea>
+            </div>
+          </div>
+          <!-- Other -->
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Change Font Styling</h5>
+              <!--dropdown-->
+              <select id="fontSelect" onchange="changeFontStyle()" class="form-control">
+                <option selected>Select Font Style</option>
+                <option value="">Default</option>
+                <option value="Bilbo, cursive">Bilbo, cursive</option>
+                <option value="Loved by the King">Loved by the King</option>
+                <option value="Fondamento">Fondamento</option>
+                <option value="Fondamento, Italic">Fondamento, Italic</option>
+                <option value="Allison">Allison</option>
+                <option value="Seaweed Script">Seaweed Script</option>
+                <option value="Neucha">Neucha</option>
+                <option value="Charm">Charm</option>
+                <option value="Marck Script">Marck Script</option>
+                <option value="Nanum Pen Script">Nanum Pen Script</option>
+                <option value="Handlee">Handlee</option>
+                <option value="Playwrite AU NSW">Playwrite AU NSW</option>
+                <option value="Architects Daughter">Architects Daughter</option>
+                <option value="Gochi Hand">Gochi Hand</option>
+                <option value="Allura">Allura</option>
+                <option value="Playwrite HR Lijeva">Playwrite HR Lijeva</option>
+                <option value="Satisfy">Satisfy</option>
+                <option value="Shadows Into Light">Shadows Into Light</option>
+                <option value="Indie Flower">Indie Flower</option>
+                <option value="Caveat">Caveat</option>
+                <option value="Playwrite CU">Playwrite CU</option>
+            </select>
+            <select id="fontSize" onchange="changeFontSize()" class="form-control" style="margin-top: 10px;">
+              <option selected>Select Font Size</option>
+              <option value="">Default</option>
+              <option value="0.2rem">0.2rem</option>
+              <option value="0.3rem">0.3rem</option>
+              <option value="0.5rem">0.5rem</option>
+              <option value="0.7rem">0.7rem</option>
+              <option value="0.9rem">0.9rem</option>
+              <option value="1.2rem">1.2rem</option>
+              <option value="1.3rem">1.3rem</option>
+              <option value="1.5rem">1.5rem</option>
+              <option value="1.7rem">1.7rem</option>
+          </select>
+            <select id="wordSpacing" onchange="changeWordSpacing()" class="form-control" style="margin-top: 10px;">
+              <option selected>Select Word Spacing</option>
+              <option value="">Default</option>
+              <option value="2px">2px</option>
+              <option value="5px">5px</option>
+              <option value="10px">8px</option>
+              <option value="15px">10px</option>
+          </select>
+          <select id="letterSpacing" onchange="changeLetterSpacing()" class="form-control" style="margin-top: 10px;">
+            <option selected>Select Letter Spacing</option>
+            <option value="">Default</option>
+            <option value="0.2px">0.2px</option>
+            <option value="0.4px">0.4px</option>
+            <option value="0.5px">0.5px</option>
+            <option value="0.7px">0.7px</option>
+            <option value="0.9px">0.9px</option>
+            <option value="1px">1px</option>
+            <option value="2px">2px</option>
+            <option value="3px">3px</option>
+        </select>
+            <button onclick="saveAsPDF()" id="printMe" type="button" class="btn btn-light" style="border: 1px solid rgb(224, 221, 221); margin-top: 10px;">Download Assignment</button>
+
+            </div>
+          </div>
+          <!-- other -->
+          <div class="card" style="width: 35rem; height: 32rem;">
+            <div class="card-body">
+              <h5 class="card-title">PDF Sample View</h5>
+              <textarea id="printArea" class="form-control textArea textAreaReflect print-area" style="height: 28rem" placeholder="Your Assignment Solution Generates Here..." readonly></textarea>
+            </div>
+          </div>
+      </div>
+
+      <div class="footer">
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/vishal-paswan-59772925b"><div class="circle"><i class="fa-brands fa-linkedin-in log"></i></div></a>
+          <a href="https://x.com/VishalPaswan24"><div class="circle"><i class="fa-brands fa-twitter log"></i></div></a>
+          <a href="https://github.com/VishalPaswan2402"><div class="circle"><i class="fa-brands fa-github log"></i></div></a>
+          <a href="https://leetcode.com/u/VishalPaswan/"><div class="circle"><i class="fa-solid fa-code log"></i></div></a>
+        </div>
+        <div class="txtFoot">
+          <p>2024 Designed And Created By Vishal Paswan.</p>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
