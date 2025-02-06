@@ -21,4 +21,4 @@ A simple **Text Formatter** web application built using **HTML, CSS, and JavaScr
 - **HTML**: Structure of the web page  
 - **CSS**: Styling and layout  
 - **JavaScript**: Interactive text formatting  
-- **JSPDF Library**: For PDF generation  
+- **JSPDF Library**: For PDF generation.
